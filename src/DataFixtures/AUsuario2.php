@@ -7,22 +7,21 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
-class AUsuario extends Fixture
+class AUsuario2 extends Fixture
 {
     private $passwordEncoder;
 
     public function __construct(UserPasswordEncoderInterface $passwordEncoder)
     {
-         $this->passwordEncoder = $passwordEncoder;
+        $this->passwordEncoder = $passwordEncoder;
     }
 
     public function load(ObjectManager $manager)
     {
 
         $u = new User();
-        $u->setUsername("jorge@asd.es");
-        $u->setRoles(['ROLE_ADMIN']);
-        $u->setNombrecompleto("Jorge Dueñas Lerín");
+        $u->setUsername("nayem97");
+        $u->setNombrecompleto("Nayem Rahman Syed");
         $u->setPassword(
             $this->passwordEncoder->encodePassword($u, '1234')
         );

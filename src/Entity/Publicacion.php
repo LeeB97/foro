@@ -58,7 +58,6 @@ class Publicacion
     public function __construct()
     {
         $this->comentarios = new ArrayCollection();
-        $this->usuario = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -167,6 +166,11 @@ class Publicacion
         $this->usuario = $usuario;
 
         return $this;
+    }
+
+    public function __toString()
+    {
+        return "(" . $this->getId() . ")" . substr($this->getTitulo(), 0,10);
     }
 
 }

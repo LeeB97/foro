@@ -90,4 +90,9 @@ class Comentario
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return "(" . $this->getId() . ")" . $this->getUsuario();
+    }
 }
