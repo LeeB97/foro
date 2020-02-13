@@ -1,0 +1,12 @@
+{# templates/bundles/TwigBundle/Exception/error404.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Lo siento</h1>
+
+    <p>
+        La página no existe!!!
+
+        <a href="{{ path('ultimas-publicaciones') }}">return to the homepage</a>.
+    </p>
+{% endblock %}

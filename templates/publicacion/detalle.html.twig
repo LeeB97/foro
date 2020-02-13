@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PublicacionController!{% endblock %}
+
+{% block navegacion %}
+    <nav>
+        <ul>
+            <li>Navegación del hijo <a href=""><img src="" alt=""></Navegacióna></li>
+            <li><a href=""><p></p></a></li>
+            <li><a href=""><img src="" alt=""></a></li>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    {{ publicacion.getTitulo }}</br>
+    {{ publicacion.getContenido }}</br>
+    <ul>
+    {% for comentario in publicacion.getComentarios %}
+        <li>{{ comentario.getContenido }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
